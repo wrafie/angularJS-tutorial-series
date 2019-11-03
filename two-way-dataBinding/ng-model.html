@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myModule">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Two-way Databinding</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.js"></script>
+    <script src="ng-model.js"></script>
+</head>
+
+<body ng-controller="myController">
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td>
+                <input type="text" ng-model="employee.firstName"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>
+                <input type="text" ng-model="employee.lastName"/>
+            </td>
+        </tr>
+        <tr>
+            <td>Mail</td>
+            <td>
+                <input type="text" ng-model="employee.mail"/>
+            </td>
+        </tr>
+    </table>
+    <table>
+        <tr>
+            <td>First Name</td>
+            <td>
+                {{ employee.firstName }}
+            </td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>
+                {{ employee.lastName }}
+            </td>
+        </tr>
+        <tr>
+            <td>Gender</td>
+            <td>
+                {{ employee.mail }}
+            </td>
+        </tr>
+    </table>
+</body>
+
+</html>
